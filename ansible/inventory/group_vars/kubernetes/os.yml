@@ -1,6 +1,6 @@
 ---
 # (string) Timezone for the servers
-# timezone: "America/New_York"
+timezone: "America/Denver"
 
 # (list) Additional ssh public keys to add to the nodes
 # ssh_authorized_keys:
@@ -32,3 +32,13 @@ ubuntu:
     - socat
     - python3-kubernetes
     - python3-yaml
+    - open-iscsi
+    - curl
+    - vim
+    - git
+    - apt-transport-https
+    - ca-certificates
+    - tmux
+    - zip
+    - unzip
+    - software-properties-common

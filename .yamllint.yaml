@@ -1,6 +1,7 @@
 ---
 ignore: |
   *.sops.*
+  *kustomizeconfig.yaml*
 extends: default
 rules:
   truthy:
