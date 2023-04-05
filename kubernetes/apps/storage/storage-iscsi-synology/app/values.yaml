@@ -1,5 +1,6 @@
 ---
-clientInfoSecret: storage-iscsi-synology-client-info
+clientInfoSecret:
+  name: storage-iscsi-synology-client-info
 
 storageClasses:
   iscsi-delete:
