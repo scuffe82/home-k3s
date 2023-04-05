@@ -4,6 +4,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   annotations:
+    kustomize.toolkit.fluxcd.io/substitute: disabled
   labels:
     app: nfs-subdir-external-provisioner
   name: nfs-delete
@@ -19,6 +20,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   annotations:
+    kustomize.toolkit.fluxcd.io/substitute: disabled
   labels:
     app: nfs-subdir-external-provisioner
   name: nfs-retain
