@@ -1,0 +1,8 @@
+---
+clientInfoSecret: storage-iscsi-synology-client-info
+
+storageClasses:
+  iscsi-delete:
+    reclaimPolicy: Delete
+  iscsi-retain:
+    reclaimPolicy: Retain

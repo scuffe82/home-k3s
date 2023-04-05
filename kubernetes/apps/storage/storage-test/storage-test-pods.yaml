@@ -1,0 +1,48 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-retain-pod
+  annotations:
+    storage-path: "test-retain"
+spec:
+  containers:
+  - name: test-pod
+    image: gcr.io/google_containers/busybox:1.24
+    command:
+      - "/bin/sh"
+    args:
+      - "-c"
+      - "touch /mnt/SUCCESS-PERSISTANT && exit 0 || exit 1"
+    volumeMounts:
+      - name: nfs-retain
+        mountPath: "/mnt"
+  restartPolicy: "Never"
+  volumes:
+    - name: nfs-retain
+      persistentVolumeClaim:
+        claimName: test-retain-claim
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: test-delete-pod
+  annotations:
+    storage-path: "test-delete"
+spec:
+  containers:
+  - name: test-pod
+    image: gcr.io/google_containers/busybox:1.24
+    command:
+      - "/bin/sh"
+    args:
+      - "-c"
+      - "touch /mnt/SUCCESS-TEMP && exit 0 || exit 1"
+    volumeMounts:
+      - name: nfs-delete
+        mountPath: "/mnt"
+  restartPolicy: "Never"
+  volumes:
+    - name: nfs-delete
+      persistentVolumeClaim:
+        claimName: test-delete-claim

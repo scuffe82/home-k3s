@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./storage-nfs-subdir/ks.yaml
-#  - ./storage-iscsi-synology/ks.yaml
+  - ./storage-iscsi-synology/ks.yaml

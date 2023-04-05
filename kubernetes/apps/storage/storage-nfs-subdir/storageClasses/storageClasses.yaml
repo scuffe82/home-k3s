@@ -9,6 +9,7 @@ metadata:
   name: nfs-delete
 parameters:
   archiveOnDelete: "false"
+  pathPattern: ${.PVC.namespace}/${.PVC.name}
 provisioner: cluster.local/storage-nfs-subdir-nfs-subdir-external-provisioner
 reclaimPolicy: Delete
 volumeBindingMode: Immediate
@@ -23,6 +24,7 @@ metadata:
   name: nfs-retain
 parameters:
   archiveOnDelete: "true"
+  pathPattern: ${.PVC.namespace}/${.PVC.name}
 provisioner: cluster.local/storage-nfs-subdir-nfs-subdir-external-provisioner
 reclaimPolicy: Retain
 volumeBindingMode: Immediate
