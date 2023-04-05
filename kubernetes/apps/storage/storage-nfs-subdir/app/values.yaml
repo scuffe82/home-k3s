@@ -1,6 +1,6 @@
 nfs:
-  server: ${SECRET_NFS_SERVER_ADDRESS:}
-  path: ${SECRET_NFS_SERVER_PATH:}
+  server: ${SECRET_NFS_SERVER_ADDRESS}
+  path: ${SECRET_NFS_SERVER_PATH}
   mountOptions:
   volumeName: nfs-subdir-external-provisioner-root
   # Reclaim policy for the main nfs volume
