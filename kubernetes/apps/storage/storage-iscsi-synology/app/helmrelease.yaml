@@ -9,7 +9,7 @@ spec:
   releaseName: storage-iscsi-synology
   chart:
     spec:
-      chart: synology-csi-chart
+      chart: synology-csi
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
