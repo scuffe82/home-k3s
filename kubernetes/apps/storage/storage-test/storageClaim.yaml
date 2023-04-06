@@ -4,21 +4,21 @@ apiVersion: v1
 metadata:
   name: test-retain-claim
 spec:
-  storageClassName: nfs-retain
+  storageClassName: storage-iscsi-synology-synology-csi-retain
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Mi
+      storage: 1Gi
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: test-delete-claim
 spec:
-  storageClassName: nfs-delete
+  storageClassName: storage-iscsi-synology-synology-csi-delete
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Mi
+      storage: 1Gi
