@@ -3,6 +3,7 @@ ignore: |
   *.sops.*
   *kustomizeconfig.yaml*
   *storage-test-pods.yaml*
+  *values.yaml*
 extends: default
 rules:
   truthy:

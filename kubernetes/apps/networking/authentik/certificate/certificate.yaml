@@ -1,0 +1,14 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: "authentik-tls-staging"
+  namespace: networking
+spec:
+  secretName: "authentik-tls-staging"
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: "${SECRET_DOMAIN}"
+  dnsNames:
+    - "auth.${SECRET_DOMAIN}"
