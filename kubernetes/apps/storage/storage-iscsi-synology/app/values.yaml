@@ -1,4 +1,4 @@
 ---
 clientInfoSecret:
-  name: test
+  name: storage-iscsi-synology-client-info
   create: false
