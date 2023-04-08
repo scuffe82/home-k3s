@@ -225,6 +225,8 @@ tracing: {}
 globalArguments:
   - "--global.checknewversion"
   - "--global.sendanonymoususage"
+  - "--serverstransport.insecureskipverify=true"
+
 
 #
 # Configure Traefik static configuration
