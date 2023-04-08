@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: networking
 resources:
   - helmrelease.yaml
-  - ingress.yaml
   - middleware.yaml
 configMapGenerator:
   - name: authentik-values
