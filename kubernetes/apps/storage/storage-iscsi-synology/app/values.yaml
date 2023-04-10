@@ -5,5 +5,5 @@ clientInfoSecret:
 storageClasses:
   delete:
     isDefault: true
-  parameters:
-    fsType: ext4
+    parameters:
+      fsType: ext4
