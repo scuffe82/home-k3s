@@ -9,6 +9,5 @@ spec:
   issuerRef:
     name: letsencrypt-staging
     kind: ClusterIssuer
-  commonName: "auth.${SECRET_DOMAIN}"
   dnsNames:
     - "auth.${SECRET_DOMAIN}"
