@@ -16,4 +16,4 @@ resources:
   - ./weave-gitops.yaml
   - ./storage-nfs-subdir.yaml
   - ./storage-iscsi-synology.yaml
-#  - ./authentik.yaml
+  - ./authentik.yaml
