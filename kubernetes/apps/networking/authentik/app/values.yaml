@@ -15,9 +15,6 @@ postgresql:
   postgresqlPassword: ${SECRET_POSTGRES_PASS}
   persistence:
     enabled: true
-    storageClass: storage-iscsi-synology-synology-csi-retain
-    accessModes:
-      - ReadWriteOnce
 
 redis:
   enabled: true

@@ -5,6 +5,7 @@ kind: StorageClass
 metadata:
   annotations:
     kustomize.toolkit.fluxcd.io/substitute: disabled
+    storageclass.kubernetes.io/is-default-class: "true"
   labels:
     app: nfs-subdir-external-provisioner
   name: nfs-delete
