@@ -2,3 +2,6 @@
 clientInfoSecret:
   name: storage-iscsi-synology-client-info
   create: false
+storageClasses:
+  delete:
+    isDefault: true
